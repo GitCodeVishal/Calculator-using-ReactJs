@@ -6,21 +6,22 @@ import {evaluate} from 'mathjs';
 
 function App() {
 
-  const[input , setInput] = useState('')
+  const[input , setInput] = useState('0')
 
   const handleClick = (value) => {
-  setInput((prevInput) => prevInput + value)
+  setInput((prevInput) => `${prevInput}${value}` )
   }
 
   const calculate = (input) =>{
-    const result = evaluate(input);
-    return result;
+  const result = evaluate(input);
+  return setInput(result);
+    
   }
 
   return (
-    <div className="App">
+    <div className="app">
      <Display input={input}/>
-     <Signs handleClick={handleClick}/>
+     <Signs handleClick={handleClick} setInput={setInput}/>
      <Buttons handleClick={handleClick} input={input} calculate={calculate}/>
     </div>
   );

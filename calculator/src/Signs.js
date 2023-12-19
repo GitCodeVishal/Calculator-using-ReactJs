@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Signs = ({handleClick}) => {
+const Signs = ({handleClick, setInput}) => {
   return (
-    <div className='Signs'>
-        <button onClick={()=>{handleClick('/')}}>/</button>
-        <button onClick={()=>{handleClick('x')}}>x</button>
-        <button onClick={()=>{handleClick('-')}}>-</button>
-        <button onClick={()=>{handleClick('+')}}>+</button>
-        <button>DEL</button>
+    <div className='signs'>
+        <button className='signs_plus' onClick={()=>{handleClick('/')}}>/</button>
+        <button className='signs_plus' onClick={()=>{handleClick('*')}}>x</button>
+        <button className='signs_plus' onClick={()=>{handleClick('-')}}>-</button>
+        <button className='signs_plus' onClick={()=>{handleClick('+')}}>+</button>
+        <button className='signs_plus' onClick={()=>setInput('0')}>DEL</button>
     </div>
   )
 }
