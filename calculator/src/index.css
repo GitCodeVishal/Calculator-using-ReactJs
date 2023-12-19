@@ -11,11 +11,10 @@
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(238,237,239);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .app {
@@ -25,33 +24,45 @@
     height: 400px;
     width: 400px;
     justify-content: space-between;
-    overflow: hidden;
-    border-radius: 16px;
+    border-radius: 16px 16px 0px 0px;
     margin-top: 12vh;
+    overflow: hidden;
   }
   
   .display {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
     background-color: rgb(19,26,39);
     color: whitesmoke;
-    flex-grow: 0.2;
+    flex-grow: 0.2; 
+    border-radius: 10px 10px 0px 0px ;
+    flex-wrap: wrap;
+    transition: font-size 0.3s ease;
   }
 
   .display_para{
     box-sizing: border-box;
+    width: auto;
+    max-height: max-content;
     padding-right:7px ;
     padding-top: 15px;
-    font-size: 50px;
+    font-size: 2em;
+    word-break: break-all;
+    text-overflow: ellipsis;
   }
+  
+  @media screen and (max-height: 107px) {
+    .display_para {
+      font-size: 1em;
+    }
+  }
+  
 
   .signs{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
     flex-grow: 1;
     overflow: hidden;
   }
@@ -62,6 +73,7 @@
     background-color: rgb(217,30,92);
     color: antiquewhite;
     font-size: 20px;
+    cursor: pointer;
   }
   
   .buttons{
@@ -69,14 +81,67 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     background-color: rgb(19,26,39);
     flex-grow: 3;
+    
   }
+
 
   .buttons_1{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: powderblue;
+    flex: 1;
+  }
+
+  .buttons_2{
+    display: flex;
+    justify-content: space-around;
+    background-color: powderblue;
+    flex: 1;
+    
+  }
+
+  .buttons_3{
+    display: flex;
+    justify-content: space-around;
+    background-color: powderblue;
+    flex: 1;
+  }
+
+  .buttons_4{
+    display: flex;
+    justify-content: space-around;
+    background-color: powderblue;
+    flex: 1;
   }
   
+  .buttons_1 > * {
+    flex: 1;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
   
+  }
+  .buttons_2 > * {
+    flex: 1;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+  }
+  .buttons_3 > * {
+    flex: 1;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .buttons_4 > * {
+    flex: 1;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    
+  }
+
+ 

@@ -9,8 +9,12 @@ function App() {
   const[input , setInput] = useState('0')
 
   const handleClick = (value) => {
-  setInput((prevInput) => `${prevInput}${value}` )
-  }
+    if(input==='0'){
+      setInput(value);
+    }else{
+      setInput((prevInput) => `${prevInput}${value}` )
+    }
+  };
 
   const calculate = (input) =>{
   const result = evaluate(input);
